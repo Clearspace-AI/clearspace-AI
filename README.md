@@ -3,13 +3,15 @@
 
 ### AI-Powered Digital Organization & Intelligent Document Discovery
 
+**Created by Shreya Gavande and Kavya Raval**
+
 ## 📌 Introduction
 
 ClearSpace AI is an intelligent digital organization workspace that transforms scattered documents, research materials, notes, and PDFs into a clean, searchable digital library.
 
-Powered by AI-driven document understanding, ClearSpace extracts meaningful information from files, generates concise summaries, identifies relevant categories, and recommends smarter ways to organize digital content.
+Using AI-powered document analysis, ClearSpace AI generates concise summaries, recommends relevant categories, extracts keywords, and suggests smarter ways to organize digital content.
 
-Instead of manually sorting through endless folders and confusing filenames, users can upload their documents, discover relevant information through smart search, detect duplicate files, and build a more organized digital workspace.
+Instead of manually sorting through endless folders and confusing filenames, users can upload documents, discover relevant information, detect duplicate files, and build a more organized digital workspace.
 
 **Less time managing digital clutter, more time focusing on what matters.**
 
@@ -17,134 +19,162 @@ Instead of manually sorting through endless folders and confusing filenames, use
 
 ## 🎥 Demo
 
-[**🚀 Try ClearSpace AI Live**](YOUR_STREAMLIT_APP_URL)
+🚀 **Try ClearSpace AI Live:** [Launch ClearSpace AI](YOUR_STREAMLIT_APP_URL)
 
-<!-- Add a demo GIF or screenshot here -->
+**GitHub Repository:** https://github.com/Clearspace-AI/clearspace-AI
+
+<!-- Add a screenshot or demo GIF here -->
 <!-- ![ClearSpace AI Demo](assets/demo.gif) -->
 
 ---
 
 ## 🤔 Why ClearSpace AI?
 
-Digital clutter makes it difficult to find information when it matters most. Important research gets buried, duplicate documents accumulate, and filenames rarely explain what a file actually contains.
+Digital clutter makes it difficult to find information when it matters most. Important research gets buried, duplicate documents accumulate, and filenames rarely explain what a document actually contains.
 
-ClearSpace AI addresses these challenges by:
+ClearSpace AI helps solve these problems by:
 
-- 📂 Transforming scattered files into an organized digital library.
-- 🤖 Using AI to understand document contents and generate meaningful summaries.
-- 🔎 Helping users discover information through smart search.
+- 📂 Bringing scattered documents into one organized workspace.
+- 🤖 Generating meaningful summaries using AI when configured.
+- 🔎 Helping users discover information through document search.
 - 🧠 Recommending relevant categories and smart collections.
 - 🔁 Identifying exact duplicate files using SHA-256 hashing.
-- 🔒 Prioritizing privacy and giving users control over their documents.
+- 🔒 Keeping users in control of their documents and organization decisions.
 
 ---
 
 ## 🚀 Features
 
 ### 📤 Intelligent File Import
+
 - Upload multiple documents.
-- Support for text files (`.txt`), Markdown (`.md`), and text-based PDFs.
-- Extract document text and metadata.
+- Support `.txt`, `.md`, and text-based PDF files.
+- Extract document text for analysis and discovery.
 - Handle unsupported files and extraction errors gracefully.
 
 ### 🤖 AI-Powered Document Intelligence
+
+When a hosted AI provider is configured, ClearSpace AI can:
+
 - Generate concise document summaries.
-- Recommend document categories and smart collections.
+- Recommend document categories and collections.
 - Extract relevant keywords.
-- Explain why a document belongs in a particular category.
-- Support a modular architecture for AI provider integrations.
+- Explain categorization recommendations.
+- Support multiple AI providers through a modular service layer.
+
+**Demo mode** is available without hosted AI credentials. It uses deterministic keyword rules and extracted text, not an AI model.
 
 ### 🔎 Smart Document Search
 
-Search across filenames, extracted text, summaries, keywords, and categories to find relevant information quickly.
+Search across filenames, extracted text, summaries, keywords, and categories to find information more easily.
 
-Example queries:
+Example searches:
+
 - "Find my notes about photosynthesis."
 - "Which document discusses climate change?"
 - "Show me the project proposal with the budget."
 - "Find my machine learning study materials."
 
+The current search functionality is keyword-based. Embedding-based semantic search is a planned enhancement.
+
 ### 🔁 Duplicate Detection
-- Detect exact duplicate files using SHA-256 content hashes.
+
+- Identify exact duplicates using SHA-256 content hashes.
 - Group files with identical contents.
 - Display matching filenames and file sizes.
-- Keep users in control of file deletion.
+- Keep deletion decisions under the user's control.
 
 ### 🗂️ Smart Organization
+
 - Recommend document categories and collections.
-- Suggest meaningful destination folders.
-- Explain organization recommendations.
-- Allow users to review suggestions before applying changes.
+- Suggest meaningful collection names.
+- Explain why a category was recommended.
+- Allow users to review recommendations before applying changes.
 
 ### 📄 Document Details & Preview
-- View document metadata and extracted text.
-- Explore AI-generated summaries and keywords.
-- Review document categories and suggested collections.
 
-### 🎨 Modern User Experience
-- Minimalist dashboard and intuitive navigation.
-- Dark mode and light mode.
-- Smart collections and overview metrics.
-- Responsive layouts and reusable UI components.
-- Clear loading states, notifications, and error handling.
+- View document metadata and extracted text.
+- Review summaries and keywords.
+- Inspect document categories and suggested collections.
+- Check analysis statuses and error messages.
+
+### 🎨 User-Friendly Experience
+
+- Clean dashboard and intuitive navigation.
+- Overview metrics and smart collections.
+- Dedicated views for files, duplicates, and recently analyzed documents.
+- Organization planning and provider settings.
+- Loading states, notifications, and error handling.
 
 ---
 
 ## ⚙️ How It Works
 
 ```text
-Document Upload
-       ↓
-Text Extraction & Metadata Processing
-       ↓
-Document Content Analysis
-       ↓
-AI-Powered Summaries & Categorization
-       ↓
-Smart Search & Duplicate Detection
-       ↓
-Organization Recommendations
-       ↓
-A Cleaner, More Searchable Digital Library
+       Document Upload
+              ↓
+   Text Extraction & Processing
+              ↓
+     Document Content Analysis
+              ↓
+   AI Summaries & Categorization
+              ↓
+     Search & Duplicate Detection
+              ↓
+    Organization Recommendations
+              ↓
+     A More Organized Workspace
 ```
 
-ClearSpace separates document processing, AI analysis, search, and organization into modular services, making the application easier to maintain and extend.
+ClearSpace AI separates document processing, AI analysis, search, and organization into modular services, making the application easier to maintain and extend.
 
 ---
 
 ## 🧠 AI Architecture
 
-ClearSpace is designed to support a provider-independent AI service layer.
+ClearSpace AI uses a provider-independent service layer to separate the application workflow from provider-specific API requests.
 
 ```text
              ClearSpace UI
                   ↓
           AI Service Interface
                   ↓
-         Provider Configuration
-             ↙           ↘
-    DigitalOcean       Snowflake
-      Integration     Integration
+          Provider Selection
+                  ↓
+        ┌─────────┼─────────┐
+        ↓         ↓         ↓
+       Demo   Snowflake  DigitalOcean
+              Cortex AI   Inference
 ```
 
-The architecture is intended to support DigitalOcean Gradient AI Inference or Snowflake AI capabilities, depending on the selected platform and configured integrations.
+### Supported Provider Modes
+
+- **Demo:** Uses keyword rules and extracted text. No hosted AI model is called.
+- **Snowflake:** Uses the Snowflake Cortex REST API when account access, authentication, and model configuration are set up correctly.
+- **DigitalOcean:** Supports the configured DigitalOcean AI inference endpoint when valid credentials and a compatible model are available.
+
+Actual AI analysis depends on valid credentials, model availability, account permissions, and successful API requests.
 
 Provider-specific authentication, model requests, and response handling are isolated from the main application logic.
-
-*Actual provider support depends on the integrations implemented and enabled in the deployed version.*
 
 ---
 
 ## 🔐 Privacy & Trust
 
-- Process document contents locally where practical.
-- Send only necessary text to a configured hosted AI provider.
-- Keep API credentials out of source code and version control.
-- Clearly distinguish demo results from genuine AI-generated analysis.
-- Never automatically move or delete user files.
-- Handle processing errors without falsely reporting success.
+ClearSpace AI is designed to give users control over document analysis and organization.
 
-Users should be informed when document content is sent to an external AI service.
+- **User consent:** The application asks for consent before sending document text to a hosted AI provider.
+- **Limited text submission:** AI requests are limited to a maximum of 12,000 characters of document text.
+- **Credential protection:** API credentials should be stored in environment variables or deployment secrets, never committed to source control.
+- **Human-reviewed organization:** Users remain in control of organization recommendations and file deletion.
+- **Transparent demo mode:** Demo results are distinguished from hosted AI analysis.
+- **Error handling:** Failed requests should be reported rather than presented as successful analysis.
+
+### Current Storage Limitations
+
+The current application keeps its document library in Streamlit session state. It does not provide a persistent database-backed library, so documents and analysis results should not be assumed to survive a session reset or application restart.
+
+When hosted AI is enabled, submitted document text is processed by the configured external provider and is subject to that provider's policies and retention practices. Avoid uploading sensitive documents unless you understand and accept those terms.
 
 ---
 
@@ -152,43 +182,36 @@ Users should be informed when document content is sent to an external AI service
 
 | Component | Technology |
 |---|---|
-| Frontend | Streamlit |
-| Programming Language | Python |
-| Data Processing | Pandas, where appropriate |
-| Document Processing | Text extraction and PDF parsing libraries |
-| AI Architecture | Provider-independent service layer |
-| AI Platform Options | DigitalOcean Gradient AI / Snowflake AI |
-| Duplicate Detection | SHA-256 |
-| Deployment | Streamlit Community Cloud |
-
-*Keep this list aligned with the technologies actually implemented in the project.*
+| User interface | Streamlit |
+| Programming language | Python |
+| PDF processing | pypdf |
+| HTTP requests | httpx |
+| Environment configuration | python-dotenv and Streamlit Secrets |
+| AI service layer | Python provider adapters |
+| AI platform options | Snowflake Cortex AI and DigitalOcean AI inference |
+| Duplicate detection | SHA-256 hashing |
+| Deployment option | Streamlit Community Cloud |
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-clearspace-ai/
-│
+clearspace-AI/
 ├── app.py
-├── pages/
-├── components/
 ├── services/
 │   ├── ai_service.py
 │   ├── file_reader.py
 │   ├── search_service.py
 │   ├── organizer.py
 │   └── duplicates.py
-│
-├── data/
-│   └── demo_files/
-│
-├── assets/
 ├── .env.example
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
+
+The `services/` directory contains the application's processing and organization logic. The exact project structure may evolve as development continues.
 
 ---
 
@@ -196,16 +219,19 @@ clearspace-ai/
 
 ### Prerequisites
 
-- Python version compatible with the project dependencies.
+- Python 3.10 or a compatible Python version for the installed dependencies.
 - Git.
-- AI provider credentials, if real AI analysis is enabled.
+- Snowflake or DigitalOcean credentials if you want hosted AI analysis.
+- No hosted AI credentials are required for demo mode.
 
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd clearspace-ai
+git clone https://github.com/Clearspace-AI/clearspace-AI.git
+cd clearspace-AI/clearspace-ai
 ```
+
+If `app.py` is already in your current directory, skip the additional directory change.
 
 ### 2. Create a Virtual Environment
 
@@ -216,33 +242,53 @@ python -m venv .venv
 Activate it:
 
 **macOS / Linux**
+
 ```bash
 source .venv/bin/activate
 ```
 
-**Windows**
-```bash
-.venv\Scripts\activate
+**Windows PowerShell**
+
+```powershell
+.venv\Scripts\Activate.ps1
 ```
 
 ### 3. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
+### 4. Configure Your AI Provider
 
-Create a local `.env` file or configure secrets through your hosting platform.
+Copy `.env.example` to `.env` in the application directory and configure your preferred provider.
 
-Add the credentials required by your configured AI provider.
+For Snowflake, use the following format:
 
-Never commit real API keys, passwords, or other secrets to GitHub.
+```dotenv
+AI_PROVIDER=snowflake
+SNOWFLAKE_ACCOUNT_URL=https://YOUR_ACCOUNT_HOST.snowflakecomputing.com
+SNOWFLAKE_PAT=YOUR_SNOWFLAKE_PROGRAMMATIC_ACCESS_TOKEN
+SNOWFLAKE_MODEL=YOUR_AVAILABLE_MODEL_ID
+```
+
+Replace the placeholders with your actual Snowflake account hostname, programmatic access token, and a model supported by your account and the Cortex API.
+
+**Important:**
+
+- Use your Snowflake account's API hostname, not the Snowsight web application URL.
+- Ensure your account permits the selected model and API access.
+- Never commit `.env`, access tokens, or other secrets to GitHub.
+- For demo mode, set `AI_PROVIDER=demo`.
+
+For DigitalOcean, configure `DIGITALOCEAN_API_KEY` and `DIGITALOCEAN_MODEL` in your environment file.
 
 ### 5. Run the Application
 
+From the directory containing `app.py`, run:
+
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 Open the local URL displayed in your terminal to access ClearSpace AI.
@@ -251,9 +297,26 @@ Open the local URL displayed in your terminal to access ClearSpace AI.
 
 ## ☁️ Deployment
 
-ClearSpace AI can be deployed through Streamlit Community Cloud by connecting the GitHub repository, selecting the application entrypoint, and configuring dependencies and secrets.
+### Streamlit Community Cloud
 
-For DigitalOcean-based deployment, the application can also run on a Droplet or a suitable App Platform configuration, depending on the selected architecture.
+1. Push your project to GitHub.
+2. Create a new app in Streamlit Community Cloud.
+3. Select the repository, branch, and application entrypoint.
+4. Add your AI provider configuration under the app's Secrets settings.
+5. Deploy the app and test document upload and analysis.
+
+Example Snowflake secrets configuration:
+
+```toml
+AI_PROVIDER = "snowflake"
+SNOWFLAKE_ACCOUNT_URL = "https://YOUR_ACCOUNT_HOST.snowflakecomputing.com"
+SNOWFLAKE_PAT = "YOUR_SNOWFLAKE_PROGRAMMATIC_ACCESS_TOKEN"
+SNOWFLAKE_MODEL = "YOUR_AVAILABLE_MODEL_ID"
+```
+
+Use real values only in your deployment's secrets manager, not in README files or committed source code.
+
+After deployment, verify demo mode and hosted AI analysis, if enabled.
 
 ---
 
@@ -267,14 +330,22 @@ For DigitalOcean-based deployment, the application can also run on a Droplet or 
 - 🔐 User authentication and workspace permissions.
 - 📊 Advanced document insights and analytics.
 - 🤖 Expanded AI provider integrations.
-- 📱 Enhanced mobile experience.
+- 📱 Improved mobile experience.
 
 ---
 
-## 👩‍💻 Built For
+## 👩‍💻 Built By
 
-Developed as a hackathon project exploring the intersection of **Artificial Intelligence, Productivity, and Intelligent Information Management**.
+**Shreya Gavande and Kavya Raval**
 
-ClearSpace AI aims to make digital organization effortless by turning scattered information into a workspace that is easier to navigate, understand, and maintain.
+ClearSpace AI was developed as a hackathon project exploring the intersection of **Artificial Intelligence, Productivity, and Intelligent Information Management**.
+
+Our goal is to make digital organization easier by transforming scattered information into a workspace that is more searchable, understandable, and manageable.
 
 ### ✨ Less clutter. Better discovery. More clarity.
+
+---
+
+## 📄 License
+
+MIT License.
