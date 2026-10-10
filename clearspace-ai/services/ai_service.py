@@ -299,6 +299,7 @@ def analyze_document(text, filename, provider=None):
     return validate(ADAPTERS[provider]().analyze(text, filename))
 
 
+
 def analyze_into(doc, provider):
     try:
         result = analyze_document(doc.text, doc.name, provider)
@@ -314,3 +315,7 @@ def analyze_into(doc, provider):
     except AnalysisError as exc:
         doc.status = "Failed"
         doc.error = str(exc)
+
+    except Exception as exc:
+        doc.status = "Failed"
+        doc.error = f"Unexpected {type(exc).__name__}: {exc}"
