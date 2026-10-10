@@ -7,11 +7,11 @@
 
 ## 📌 Introduction
 
-ClearSpace AI is an intelligent digital organization workspace that transforms scattered documents, research materials, notes, and PDFs into a clean, searchable digital library.
+ClearSpace AI is an intelligent digital organization workspace that leverages **Snowflake Cortex AI** to transform scattered documents, research materials, notes, and PDFs into a clean, searchable digital library.
 
-Using AI-powered document analysis, ClearSpace AI generates concise summaries, recommends relevant categories, extracts keywords, and suggests smarter ways to organize digital content.
+By integrating Snowflake’s AI capabilities into document analysis, ClearSpace AI helps generate concise summaries, recommend relevant categories, extract meaningful keywords, and uncover insights from document content. Snowflake-powered analysis brings intelligence directly into the document organization workflow, helping users turn unstructured information into more useful, accessible knowledge.
 
-Instead of manually sorting through endless folders and confusing filenames, users can upload documents, discover relevant information, detect duplicate files, and build a more organized digital workspace.
+Instead of manually sorting through endless folders and confusing filenames, users can upload documents, discover relevant information, identify potential duplicates, and build a smarter digital workspace. **By combining AI-driven document intelligence with Snowflake’s AI platform, ClearSpace AI demonstrates how enterprise data and AI capabilities can make everyday information management more efficient, organized, and insightful.**
 
 **Less time managing digital clutter, more time focusing on what matters.**
 
