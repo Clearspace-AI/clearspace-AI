@@ -19,12 +19,7 @@ Instead of manually sorting through endless folders and confusing filenames, use
 
 ## 🎥 Demo
 
-🚀 **Try ClearSpace AI Live:** [Launch ClearSpace AI](YOUR_STREAMLIT_APP_URL)
-
-**GitHub Repository:** https://github.com/Clearspace-AI/clearspace-AI
-
-<!-- Add a screenshot or demo GIF here -->
-<!-- ![ClearSpace AI Demo](assets/demo.gif) -->
+![ClearSpace AI Demo](Project%20Demo.gif)
 
 ---
 
