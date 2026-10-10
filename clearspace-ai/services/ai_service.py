@@ -243,6 +243,10 @@ class DigitalOceanAdapter:
 class SnowflakeAdapter:
     def analyze(self, text, filename):
         base = get_config("SNOWFLAKE_ACCOUNT_URL").rstrip("/")
+        if not base:
+            raise AnalysisError(
+                "SNOWFLAKE_ACCOUNT_URL is missing from the app configuration."
+            )
         parsed = urlparse(base)
 
         valid_host = (
