@@ -9,12 +9,12 @@ from components.ui import theme, brand, heading, grid, COLORS
 from services.models import CATEGORIES
 from services.demo import load_demo
 from services.file_reader import read_file
+load_dotenv(Path(__file__).parent / '.env')
 from services.ai_service import configured_provider, analyze_into, MAX_AI_CHARS
 from services.duplicates import duplicate_groups
 from services.search_service import search
 from services.organizer import plan, approve
 
-load_dotenv(Path(__file__).parent / '.env')
 st.set_page_config(page_title='ClearSpace · A little more space to think', page_icon='🌿', layout='wide')
 PAGES = ['Overview', 'All files', 'Smart collections', 'Duplicate files', 'Recently analyzed', 'Organization plan', 'Add files', 'Settings']
 for key, value in {'docs': None, 'page': 'Overview', 'selected': None, 'dark': False, 'mode': configured_provider(), 'collection_filter': 'All', 'upload_version': 0}.items():
