@@ -1,0 +1,3 @@
+Photosynthesis: turning light into life
+Chlorophyll in the chloroplast absorbs light energy. The light-dependent reactions produce ATP and NADPH. The Calvin cycle uses that energy to fix carbon dioxide into sugars.
+Lab question: how does changing light intensity affect oxygen production in pondweed? Keep temperature and plant mass constant. Count bubbles over three minutes and repeat each measurement.
